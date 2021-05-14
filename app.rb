@@ -31,3 +31,10 @@ post '/minus' do
   count.save
   redirect '/count'
 end
+
+post '/clear' do
+  count = Count.first
+  count.number = 0
+  count.save
+  redirect '/count'
+end
